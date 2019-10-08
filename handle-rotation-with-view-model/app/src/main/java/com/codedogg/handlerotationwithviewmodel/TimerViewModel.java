@@ -20,20 +20,20 @@ public class TimerViewModel extends ViewModel implements Timer.Listener {
         timer.setListener(this);
     }
 
-    public synchronized void start() {
+    public void start() {
 
         if (timer.start()) {
             isStartedLiveData.setValue(true);
         }
     }
 
-    public synchronized void pause() {
+    public void pause() {
 
         timer.pause();
         isStartedLiveData.setValue(false);
     }
 
-    public synchronized void reset() {
+    public void reset() {
 
         timer.reset();
     }
