@@ -1,4 +1,4 @@
-# How to always use AdMob test Ads by separating debug and release strings
+# How to always use AdMob test Ads when developing
 
 When using AdMob ads you are advised to use test ads when developing, otherwise you risk clicking on real ads by mistake, which could get your account banned.
 
