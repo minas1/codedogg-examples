@@ -4,7 +4,7 @@ Rotation handling on Android is difficult, so many apps lock their orientations 
 
 This has the following effects:
 * It disallows users to use them in landscape mode
-* Tablets that default in landscape mode don't play well with those apps (as they need to rotated)
+* Tablets that default in landscape mode don't play well with those apps (as they need to be rotated)
 
 This sample shows how `ViewModel` of Android Jetpack can help implement rotation handling.
 
