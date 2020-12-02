@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Smart Dialog</string>
+    <string name="purchase">Purchase</string>
+    <string name="my_app_premium">Awesome App <b>Premium</b></string>
+    <string name="premium_feature_1">No ads!</string>
+    <string name="premium_feature_2">Super duper functionality</string>
+    <string name="premium_feature_3">Awesome stuff</string>
+    <string name="loading">Loading…</string>
+    <string name="purchase_successful">Purchase successful!</string>
+    <string name="purchase_error">Error purchasing</string>
+</resources>
