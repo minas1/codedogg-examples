@@ -22,7 +22,7 @@ class PaparazziSnapshotTest {
     val paparazzi = Paparazzi()
 
     @Test
-    fun generateScreenshots() {
+    fun generateSnapshots() {
         val reflections = Reflections("com.example.ui", Scanners.MethodsAnnotated)
         val methods = reflections.getMethodsAnnotatedWith(Preview::class.java)
             .filterNot { java.lang.reflect.Modifier.isPrivate(it.modifiers) }
@@ -32,10 +32,10 @@ class PaparazziSnapshotTest {
             val name = "${method.declaringClass.simpleName}_${method.name}"
             try {
                 snapshot(name = name) {
-                    composeProxy.wrappedInstance(method).generateScreenshot()
+                    composeProxy.wrappedInstance(method).generateSnapshot()
                 }
             } catch (e: Throwable) {
-                throw RuntimeException("Error generating screenshot $name", e)
+                throw RuntimeException("Error generating snapshot $name", e)
             }
         }
     }
@@ -52,14 +52,14 @@ class PaparazziSnapshotTest {
 
         @SuppressLint("ComposableNaming")
         @Composable
-        fun generateScreenshot()
+        fun generateSnapshot()
     }
 
     private class ComposeProxy : ComposeProxyInterface {
 
         @SuppressLint("ComposableNaming")
         @Composable
-        override fun generateScreenshot() {}
+        override fun generateSnapshot() {}
 
         fun wrappedInstance(composableFunction: Method): ComposeProxyInterface {
             val proxyClass = Proxy.getProxyClass(
